@@ -1,4 +1,5 @@
 from django.db import models
+# from .models import Course
 
 # Create your models here.
 
@@ -8,7 +9,9 @@ class Student(models.Model):
     email = models.EmailField()
     country = models.CharField(max_length=20)
     date_of_birth = models.DateField()
-    code = models. PositiveSmallIntegerField()
+    codehive_id = models. PositiveSmallIntegerField()
+    student_guardian = models.CharField(max_length=20)
+    # course = models.ManyToManyField(Course, onDelete=models.CASCADE)
 
 
     def __self__(self):

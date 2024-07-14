@@ -1,4 +1,5 @@
 from django.db import models
+# from .models import Courses
 
 # Create your models here.
 class Teachers(models.Model):
@@ -8,10 +9,14 @@ class Teachers(models.Model):
     country = models.CharField(max_length=20)
     date_of_birth = models.DateField()
     id_no = models. PositiveSmallIntegerField()
-    course = models.CharField(max_length=20)
+    # course = models.ManyToManyField(Courses, onDelete = models.CASCADE)
     gender = models.CharField(max_length=20)
-    place_of_birth = models.CharField(max_length=20)
     nationality = models.CharField(max_length=20)
+    teacher_contact = models.PositiveBigIntegerField()
+    account_number = models.PositiveBigIntegerField()
+    years_of_experience = models.ImageField()
+    
+
 
 
 

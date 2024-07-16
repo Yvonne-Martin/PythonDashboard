@@ -1,10 +1,9 @@
 from django.db import models
-# from .models import Teachers
+
 
 # Create your models here.
-class Class(models.Model):
+class Classroom(models.Model):
     class_name = models.CharField(max_length=20)
-    # teacher= models.ManyToManyField(Teachers, onDelete = models.CASCADE)
     class_size = models.PositiveIntegerField()
     class_capacity= models.PositiveBigIntegerField()
     meetings = models.DateField()
@@ -20,4 +19,4 @@ class Class(models.Model):
 
 
     def __self__(self):
-        return f"{self.class_name} {self.class_teacher}"
+        return f"{self.class_name} {self.teacher}"

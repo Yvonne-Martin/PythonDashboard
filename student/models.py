@@ -1,5 +1,5 @@
 from django.db import models
-# from .models import Course
+from courses.models import Courses
 
 # Create your models here.
 
@@ -11,7 +11,7 @@ class Student(models.Model):
     date_of_birth = models.DateField()
     codehive_id = models. PositiveSmallIntegerField()
     student_guardian = models.CharField(max_length=20)
-    # course = models.ManyToManyField(Course, onDelete=models.CASCADE)
+    course = models.ManyToManyField(Courses, related_name="courses")
 
 
     def __self__(self):

@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-b636qa5*@2*j7y_sgiq9gr#1ip(cc=fq96xtucy!_*gzkll6d-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'student',
-    'class',
+    'classroom',
     'courses',
     'teachers',
     'rest_framework',
+    'classperiod',
 ]
 
 MIDDLEWARE = [

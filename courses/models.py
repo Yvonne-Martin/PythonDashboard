@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class courses(models.Model):
+class Courses(models.Model):
     course_name = models.CharField(max_length=20)
     course_teacher= models.CharField(max_length=20)
     course_duration = models.TimeField()
@@ -11,7 +11,7 @@ class courses(models.Model):
     course_description = models.CharField(max_length=50)
     course_title = models.CharField(max_length=40)
     course_objectives = models.CharField(max_length=20)
-    # course_choices = models.CharField(max_length=20, choices = [{"Active","Active"},("Inactive","Inactive")])
+    course_choices = models.CharField(max_length=20, choices = [{"Active","Active"},("Inactive","Inactive")])
     course_id = models.PositiveSmallIntegerField()
     
 

@@ -11,18 +11,16 @@ class StudentSerializer(serializers.ModelSerializer):
         model = Student
         fields = "__all__"
 
-                
-    class CoursesSerializer(serializers.ModelSerializer):
+    class TeacherSerializer(serializers.ModelSerializer):
+        class Meta:
+          model = Teachers
+          fields = "__all__"
+
+
+    class CourseSerializer(serializers.ModelSerializer):
         class Meta:
             model = Courses
             fields = "__all__"
-    
-
-    class TeachersSerializer(serializers.ModelSerializer):
-        class Meta:
-            model = Teachers
-            fields = "__all__"
-
 
     class ClassroomSerializer(serializers.ModelSerializer):
         class Meta:

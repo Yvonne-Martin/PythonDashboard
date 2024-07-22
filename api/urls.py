@@ -4,6 +4,7 @@ from .views import ClassroomListView
 from .views import TeachersListView
 from .views import ClassPeriodListView
 from .views import CoursesListView
+from .views import StudentDetailView
 
 
 
@@ -15,8 +16,6 @@ urlpatterns = [
     path ("teacher/", TeachersListView.as_view(),name="teacher_list_view"),
     path ("classroom/",ClassroomListView.as_view(),name="classroom_list_view"),
     path ("course/",CoursesListView.as_view(),name="courses_list_view"),
-
-
-
+    path("students/<int:id>",StudentDetailView.as_view(),name="student_detail_view"),
 ]
 

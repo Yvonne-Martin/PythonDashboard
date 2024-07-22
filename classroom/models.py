@@ -19,4 +19,4 @@ class Classroom(models.Model):
 
 
     def __self__(self):
-        return f"{self.class_name} {self.teacher}"
+        return f"{self.class_name}"
